@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Kanwal My Love ❤️</title>
+
+
+<style>
+
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 15px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* =========================
+   BACKGROUND IMAGE
+========================= */
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    z-index: -2;
+}
+
+/* =========================
+   LIGHT OVERLAY
+========================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.08);
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    background: rgba(255, 255, 255, 0.30);
+
+    backdrop-filter: blur(6px);
+
+    -webkit-backdrop-filter: blur(6px);
+
+    border: 1px solid rgba(255, 255, 255, 0.50);
+
+    padding: 40px 25px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+
+        0 15px 40px rgba(0,0,0,0.25),
+
+        inset 0 1px 0 rgba(255,255,255,0.40);
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.heart {
+
+    font-size: clamp(55px, 15vw, 75px);
+
+    animation: heartbeat 1s infinite;
+
+    margin-bottom: 15px;
+}
+
+
+@keyframes heartbeat {
+
+    0%, 100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.15);
+
+    }
+
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+h1 {
+
+    color: #c2185b;
+
+    font-size: clamp(28px, 8vw, 38px);
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+
+        0 2px 5px rgba(255,255,255,0.9);
+}
+
+
+/* =========================
+   PARAGRAPH
+========================= */
+
+p {
+
+    font-size: clamp(16px, 4.5vw, 19px);
+
+    line-height: 1.7;
+
+    color: #111;
+
+    margin-bottom: 14px;
+
+    font-weight: 600;
+
+    text-shadow:
+
+        0 1px 4px rgba(255,255,255,0.8);
+}
+
+
+/* =========================
+   QUESTION
+========================= */
+
+.question {
+
+    font-size: clamp(19px, 5.5vw, 24px);
+
+    font-weight: bold;
+
+    line-height: 1.4;
+
+    color: #c2185b;
+
+    margin: 25px 0;
+
+    text-shadow:
+
+        0 2px 4px rgba(255,255,255,0.9);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+button {
+
+    border: none;
+
+    padding: 14px 25px;
+
+    min-height: 50px;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+
+        0 5px 15px rgba(0,0,0,0.20);
+}
+
+
+/* =========================
+   YES BUTTON
+========================= */
+
+#yesBtn {
+
+    background: rgba(225, 29, 72, 0.90);
+
+    color: white;
+}
+
+
+#yesBtn:hover {
+
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   NO BUTTON
+========================= */
+
+#noBtn {
+
+    background: rgba(50, 50, 50, 0.80);
+
+    color: white;
+}
+
+
+#noBtn:hover {
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+
+    display: none !important;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floating-heart {
+
+    position: fixed;
+
+    bottom: -40px;
+
+    animation: floatUp linear forwards;
+
+    pointer-events: none;
+
+    z-index: 20;
+}
+
+
+@keyframes floatUp {
+
+    from {
+
+        transform:
+
+            translateY(0)
+
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+
+    to {
+
+        transform:
+
+            translateY(-110vh)
+
+            rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 10px;
+
+    }
+
+
+    .background-image {
+
+        object-position: center center;
+
+    }
+
+
+    .container {
+
+        padding: 30px 18px;
+
+        border-radius: 22px;
+
+        background: rgba(255,255,255,0.27);
+
+        backdrop-filter: blur(5px);
+
+        -webkit-backdrop-filter: blur(5px);
+
+    }
+
+
+    .buttons {
+
+        flex-direction: column;
+
+    }
+
+
+    button {
+
+        width: 100%;
+
+        max-width: 280px;
+
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONE
+========================= */
+
+@media (max-height: 650px) {
+
+    .container {
+
+        padding-top: 22px;
+
+        padding-bottom: 22px;
+
+        max-height: 95vh;
+
+        overflow-y: auto;
+
+    }
+
+
+    .heart {
+
+        font-size: 50px;
+
+        margin-bottom: 5px;
+
+    }
+
+
+    h1 {
+
+        margin-bottom: 15px;
+
+    }
+
+
+    p {
+
+        line-height: 1.5;
+
+        margin-bottom: 8px;
+
+    }
+
+
+    .question {
+
+        margin: 15px 0;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     BACKGROUND IMAGE
+========================= -->
+
+<img
+    src="Kanwal.jpeg"
+    alt="Kanwal"
+    class="background-image"
+>
+
+
+<!-- =========================
+     MAIN CARD
+========================= -->
+
+<div class="container" id="mainBox">
+
+
+    <div class="heart">
+
+        ❤️
+
+    </div>
+
+
+    <h1>
+
+        Kanwal My Love ❤️
+
+    </h1>
+
+
+    <p>
+
+        Me sharminda hu, beehad sharminda hu.
+
+    </p>
+
+
+    <p>
+
+        Mujhe aap saza den.
+
+    </p>
+
+
+    <p>
+
+        Mujh se narazgi nahi dekhi ja rahi.
+
+    </p>
+
+
+    <p>
+
+        Me kese yaqeen dilao aapko Kanwal?
+
+    </p>
+
+
+    <p>
+
+        Saza den mujhe, me wo saza puri karunga.
+
+    </p>
+
+
+    <div class="question">
+
+        Please Forgive Me, Kanwal? 🥺❤️
+
+    </div>
+
+
+    <div class="buttons">
+
+
+        <button id="yesBtn">
+
+            It's Okay ❤️
+
+        </button>
+
+
+        <button id="noBtn">
+
+            NO 😔
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================
+     SUCCESS CARD
+========================= -->
+
+<div class="container hidden" id="successBox">
+
+
+    <div class="heart">
+
+        🥹❤️
+
+    </div>
+
+
+    <h1>
+
+        Thank You Kanwal ❤️
+
+    </h1>
+
+
+    <p>
+
+        ❤️
+
+    </p>
+
+
+    <p>
+
+        I Love You So Much ❤️♾️
+
+    </p>
+
+
+</div>
+
+
+
+<script>
+
+
+/* =========================
+   GET ELEMENTS
+========================= */
+
+const yesBtn =
+    document.getElementById("yesBtn");
+
+const noBtn =
+    document.getElementById("noBtn");
+
+const mainBox =
+    document.getElementById("mainBox");
+
+const successBox =
+    document.getElementById("successBox");
+
+
+
+/* =========================
+   IT'S OKAY BUTTON
+========================= */
+
+yesBtn.addEventListener("click", function() {
+
+
+    mainBox.classList.add("hidden");
+
+
+    successBox.classList.remove("hidden");
+
+
+    for (let i = 0; i < 60; i++) {
+
+        createHeart();
+
+    }
+
+});
+
+
+
+/* =========================
+   NO BUTTON
+========================= */
+
+noBtn.addEventListener("click", function() {
+
+
+    noBtn.innerHTML =
+        "Please 🥺❤️";
+
+
+    setTimeout(function() {
+
+
+        noBtn.innerHTML =
+            "NO 😔";
+
+
+    }, 1500);
+
+});
+
+
+
+/* =========================
+   CREATE HEART
+========================= */
+
+function createHeart() {
+
+
+    const heart =
+        document.createElement("div");
+
+
+    heart.classList.add(
+        "floating-heart"
+    );
+
+
+    heart.innerHTML =
+
+        ["❤️",
+         "💕",
+         "💖",
+         "💗",
+         "💓",
+         "🥺"]
+
+        [Math.floor(
+            Math.random() * 6
+        )];
+
+
+    heart.style.left =
+
+        Math.random() * 100 + "vw";
+
+
+    heart.style.fontSize =
+
+        (Math.random() * 20 + 20)
+        + "px";
+
+
+    heart.style.animationDuration =
+
+        (Math.random() * 3 + 3)
+        + "s";
+
+
+    document.body.appendChild(heart);
+
+
+    setTimeout(function() {
+
+        heart.remove();
+
+    }, 6000);
+
+}
+
+</script>
+
+
+</body>
+
+</html>
